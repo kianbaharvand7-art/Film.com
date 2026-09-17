@@ -1,0 +1,411 @@
+* {
+  font-family: "Rubik";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  padding-top: 5%;
+}
+
+.main-hero {
+  margin-top: -4.5%;
+  width: 90%;
+  margin-right: 5%;
+  border-radius: 20px;
+  background: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+  height: 30vh;
+  color: white;
+  text-align: center;
+  margin-bottom: -8%;
+  padding: 20px;
+}
+
+svg {
+  width: 50px;
+  height: auto;
+  fill: white;
+  transition: 0.3s;
+}
+
+svg:hover {
+  transform: scale(1.08);
+}
+
+.hero {
+  margin-top: 10%;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  margin-right: 0.5%;
+  height: 580px;
+  overflow-x: auto;
+  gap: 30px;
+}
+
+.card {
+  background-color: rgb(223, 232, 240);
+  width: 22.5%;
+  margin-top: 1%;
+  border-radius: 20px;
+  padding: 8px 10px;
+  text-align: center;
+  height: 70vh;
+  transition: 0.3s;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgb(124, 27, 27);
+}
+
+.zanr {
+  color: white;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+.card img {
+  width: 85%;
+  height: 350px;
+  margin-right: 2%;
+  border-radius: 20px;
+}
+
+.card h3 {
+  color: black;
+}
+
+.card p {
+  color: rgb(121, 109, 0);
+}
+
+.card a {
+  background-color: rgb(102, 28, 28);
+  color: white;
+  display: inline-block;
+  width: 60%;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.card a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  transform: scale(1.06);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.cards2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+}
+
+.hero2 .card {
+  width: 90%;
+  height: 75.4vh;
+  transition: 0.4s;
+}
+
+.hero2 img {
+  width: 90%;
+}
+
+.hero2 .card:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  background: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+  color: white;
+  margin-top: 5%;
+  width: 90%;
+  margin-right: 5%;
+  padding: 10px 60px;
+  border-radius: 20px;
+}
+
+footer p {
+  line-height: 30px;
+}
+
+footer h2 {
+  border-bottom: 2px solid rgb(61, 132, 255);
+  line-height: 45px;
+}
+
+footer a {
+  display: block;
+  line-height: 2.35;
+  color: white;
+  text-decoration: none;
+}
+
+.contact p {
+  display: block;
+}
+
+footer a {
+  transition: 0.5s;
+}
+
+footer a:hover {
+  transform: translateX(-8px);
+  color: rgb(175, 234, 255);
+}
+
+.end {
+  border-top: 2px solid rgb(61, 132, 255);
+  ;
+  display: block;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  gap: 20%;
+}
+
+@media (max-width:1024px) {
+  .cards {
+    height: 570px;
+  }
+
+  .card {
+    width: 30%;
+    height: 540px;
+    max-height: 600px;
+  }
+
+  .cards2 {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+  }
+
+  .cards2 .card {
+    height: 575px;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 1rem;
+  }
+
+  .main {
+    gap: 14%;
+  }
+}
+
+@media (max-width:768px) {
+  .main-hero {
+    height: 22vh;
+  }
+
+  .main-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .main-hero h3 {
+    font-size: 1.2rem;
+  }
+
+  svg {
+    width: 45px;
+  }
+
+  .cards {
+    height: 570px;
+  }
+
+  .card {
+    width: 45%;
+    height: 540px;
+    max-height: 600px;
+  }
+
+  .cards2 {
+    display: grid;
+    grid-template-columns: repeat(2, 10fr);
+  }
+
+  footer h2 {
+    font-size: 1.2rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.8rem;
+  }
+
+  .main {
+    gap: 11%;
+  }
+}
+
+@media (max-width:526px) {
+  .main-hero h1 {
+    font-size: 1.45rem;
+  }
+
+  .main-hero h3 {
+    font-size: 1rem;
+  }
+
+  svg {
+    width: 40px;
+  }
+
+  .cards {
+    height: 550px;
+  }
+
+  .card {
+    width: 70%;
+    height: 520px;
+    max-height: 600px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .cards2 {
+    display: grid;
+    grid-template-columns: repeat(1, 20fr);
+  }
+
+  .cards2 .card {
+    height: 550px;
+    width: 70%;
+    margin-right: 15%;
+  }
+
+  footer {
+    width: 100%;
+    margin-right: 0%;
+    padding: 10px 10px;
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.75rem;
+  }
+
+  .main {
+    gap: 8%;
+  }
+}
+
+@media (max-width:375px) {
+  .main-hero h3 {
+    font-size: 0.7rem;
+  }
+
+  svg {
+    width: 35px;
+  }
+
+  .cards {
+    height: 435px;
+  }
+
+  .card {
+    width: 75%;
+    height: 405px;
+    max-height: 450px;
+  }
+
+  .card img {
+    height: 250px;
+    width: 80%;
+  }
+
+  .card h3 {
+    font-size: 0.85rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+  }
+
+  .zanr {
+    font-size: 1.3rem;
+  }
+
+  .cards2 .card {
+    height: 425px;
+  }
+
+
+  footer {
+    padding: 10px 5px;
+  }
+
+  footer h2 {
+    font-size: 0.7rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.5rem;
+  }
+
+  .main {
+    gap: 10%;
+  }
+}
+
+@media (max-width:320px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header a,
+  .dropdown a {
+    font-size: 0.7rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 2px;
+  }
+
+  footer {
+    padding: 10px 5px;
+  }
+
+  footer h2 {
+    font-size: 0.7rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.5rem;
+  }
+
+  .main {
+    gap: 5%;
+  }
+}

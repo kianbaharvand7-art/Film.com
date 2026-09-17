@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+    <title> ثبت نام / ورود</title>
+    <style>
+        * {
+            font-family: "Rubik";
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            padding-top: 5%;
+        }
+
+        .main-hero {
+            margin-top: -4.5%;
+            width: 90%;
+            margin-right: 5%;
+            border-radius: 20px;
+            background: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+            height: 27vh;
+            color: white;
+            text-align: center;
+            margin-bottom: -8%;
+            margin-bottom: 2%;
+        }
+
+        svg {
+            width: 50px;
+            height: auto;
+            fill: white;
+            margin-left: 1%;
+            margin-bottom: -3%;
+            transition: 0.3s;
+        }
+
+        svg:hover {
+            transform: scale(1.08);
+        }
+
+        .login {
+            width: 70%;
+            margin: 10% auto;
+            padding: 20px 30px;
+            height: 60vh;
+            background: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+            box-shadow: 0 0 25px rgba(181, 84, 84, 0.764);
+            border-radius: 12.5px;
+            margin-top: 10%;
+        }
+
+        .login h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 32.5px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 95%;
+            padding: 7px 10px;
+            border-radius: 10px;
+            border: 2px solid gray;
+        }
+
+        input:valid {
+            border-color: rgb(89, 179, 0);
+        }
+
+        input:invalid {
+            border-color: rgb(0, 0, 0);
+        }
+
+        button {
+            background-color: white;
+            color: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+            border-radius: 7px;
+            font-size: 17px;
+            width: 85%;
+            text-align: center;
+            margin-top: 7%;
+            margin-right: 7.5%;
+            cursor: pointer;
+            transition: 0.5s;
+            border: none;
+            padding: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.06);
+        }
+
+        .list-group {
+            width: 100%;
+        }
+
+        .signup a {
+            color: white;
+            text-decoration: none;
+            margin-right: 39%;
+            transition: 0.7s;
+            margin-top: 10px;
+        }
+
+        .signup a:hover {
+            color: bisque;
+        }
+
+        footer {
+            background: linear-gradient(to left, rgb(95, 27, 27), rgb(95, 28, 28)), rgb(96, 17, 17);
+            color: white;
+            margin-top: 40px;
+            width: 90%;
+            margin-right: 5%;
+            padding: 10px 60px;
+            border-radius: 20px;
+        }
+
+        footer p {
+            line-height: 30px;
+        }
+
+        footer h2 {
+            border-bottom: 2px solid rgb(61, 132, 255);
+            ;
+            line-height: 45px;
+        }
+
+        footer a {
+            display: block;
+            line-height: 2.35;
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact p {
+            display: block;
+        }
+
+        footer a {
+            transition: 0.5s;
+        }
+
+        footer a:hover {
+            transform: translateX(-8px);
+            color: rgb(175, 234, 255);
+        }
+
+        .end {
+            border-top: 2px solid rgb(61, 132, 255);
+            ;
+            display: block;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            gap: 20%;
+        }
+
+        @media (max-width: 1024px) {
+            .signup a {
+                font-size: 1rem;
+                margin-right: 220px;
+            }
+
+            footer h2 {
+                font-size: 1.6rem;
+            }
+
+            footer p,
+            footer a {
+                font-size: 1rem;
+            }
+
+            .main {
+                gap: 14%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-hero {
+                height: 22vh;
+            }
+
+            .main-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .main-hero h3 {
+                font-size: 1.2rem;
+            }
+
+            svg {
+                width: 45px;
+            }
+
+            .login {
+                height: 450px;
+            }
+
+            .login a {
+                font-size: 0.9rem;
+                margin-right: 10px;
+            }
+
+            footer h2 {
+                font-size: 1.2rem;
+            }
+
+            footer p,
+            footer a {
+                font-size: 0.8rem;
+            }
+
+            .main {
+                gap: 11%;
+            }
+        }
+
+        @media (max-width: 526px) {
+            .main-hero h1 {
+                font-size: 1.45rem;
+            }
+
+            .main-hero h3 {
+                font-size: 1rem;
+            }
+
+            svg {
+                width: 40px;
+            }
+
+            footer {
+                width: 100%;
+                margin-right: 0%;
+                padding: 10px 10px;
+            }
+
+            footer h2 {
+                font-size: 1rem;
+            }
+
+            footer p,
+            footer a {
+                font-size: 0.75rem;
+            }
+
+            .main {
+                gap: 8%;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .main-hero h3 {
+                font-size: 0.7rem;
+            }
+
+            svg {
+                width: 35px;
+            }
+            .login h1{
+                font-size: 1.7rem;
+            }
+
+            footer {
+                padding: 10px 5px;
+            }
+
+            footer h2 {
+                font-size: 0.7rem;
+            }
+
+            footer p,
+            footer a {
+                font-size: 0.5rem;
+                font-weight: 500;
+            }
+
+            .main {
+                gap: 10%;
+            }
+
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <section class="main-hero">
+        <div class="hero-content">
+            <a class="home-link" href="./index.html" aria-label="صفحه اصلی">
+                <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 10.5L12 3l9 7.5v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-10z" />
+                </svg>
+            </a>
+            <h1>ورود</h1>
+            <h3>برای تجربه کاربری بهتر وارد حساب کاربری خود شوید :</h3>
+        </div>
+    </section>
+    <form action="#" method="post" class="login">
+        <h1>ورود</h1>
+        <div class="form-group">
+            <label for="username">نام کاربری</label>
+            <input type="text" name="username" id="username" required placeholder="مثال:ario.10" />
+        </div>
+        <div class="form-group">
+            <label for="password">رمز عبور</label>
+            <input type="password" minlength="8" name="password" id="password" required placeholder="حداقل 8 کارکتر">
+        </div>
+        <button type="reset">ثــبــت اطلاعات</button>
+        <h3 class="signup">
+            <a href="./signup.html">
+                حساب کاربری ندارید؟ ثبت نام
+            </a>
+        </h3>
+    </form>
+    <footer id="footer">
+        <div class="main">
+            <div class="about">
+                <h2>فیلم دات کام</h2>
+                <p>فیلم دات کام با بیش از 8 سال سابقه<br>بزرگترین پلتفرم فیلم و سریال <br>در ایران میباشد.</p>
+            </div>
+            <div class="links">
+                <h2>لینک های سریع</h2>
+                <a href="./index.html">صفحه اصلی</a>
+                <a href="./index.html">فیلم ها</a>
+                <a href="./login.html">ثبت نام / ورود</a>
+                <a href="#footer">درباره ما</a>
+            </div>
+            <div class="contact">
+                <h2>اطلاعات تماس</h2>
+                <p>📍 تهران، خیابان آزادی</p>
+                <p>📞 021-12345678</p>
+                <p>✉️ info@film.com</p>
+            </div>
+        </div>
+        <div class="end">
+            <p>تمامی حقوق برای فیلم دات کام محفوظ است. © 2026</p>
+        </div>
+    </footer>
+</body>
+
+</html>
